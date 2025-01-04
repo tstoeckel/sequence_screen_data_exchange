@@ -1,0 +1,32 @@
+[
+    {
+        "seqence": 1,
+        "production_order": "A",
+        "target_quantity": 3
+    },
+    {
+        "seqence": 2,
+        "production_order": "B",
+        "target_quantity": 1
+    },
+    {
+        "seqence": 3,
+        "production_order": "C",
+        "target_quantity": 1
+    },
+    {
+        "seqence": 5,
+        "production_order": "E",
+        "target_quantity": 1
+    },
+    {
+        "seqence": 4,
+        "production_order": "D",
+        "target_quantity": 1
+    },
+    {
+        "seqence": 6,
+        "production_order": "F",
+        "target_quantity": 1
+    },
+]

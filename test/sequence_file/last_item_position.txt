@@ -1,0 +1,1 @@
+{"last_seq_file": "./test/sequence_file/seq_20250104_001.json", "last_item_position": 5}
