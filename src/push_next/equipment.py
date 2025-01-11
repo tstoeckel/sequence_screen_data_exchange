@@ -45,23 +45,13 @@ in_procress_order_dir = "./test/in_process"
 
 try:
     while True:
-        next_order_file = get_next_order(next_order_dir, ["syn"])
-        if next_order_file is None:
+        next_syn_file = get_next_order(next_order_dir, ["syn"])
+        if next_syn_file is None:
             print("No next order found (retry in 5 seconds)")
-
-            # recreate the first order from in process
-            next_order_file = get_next_order(in_procress_order_dir, [".data"])
-            if next_order_file is not None:
-                print("Recreate the first order from in process: {}".format(next_order_file))
-                new_location = os.path.join(next_order_dir, os.path.basename(next_order_file))
-                os.rename(next_order_file, new_location)
-                # create the .syn file
-                with open(new_location + ".syn", "w") as syn_file:
-                    syn_file.write("")
             time.sleep(5)
             continue
 
-        next_order_file = next_order_file.removesuffix(".syn")
+        next_order_file = next_syn_file.removesuffix(".syn")
         print("Next order file: {}".format(next_order_file))
 
         data = read_next_order_file(next_order_file)
